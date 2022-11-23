@@ -27,13 +27,17 @@ namespace Work_Metric_Tracker.Pages.Worker
                         {
                             while (reader.Read())
                             {
+
                                 WorkerInfo workerInfo = new WorkerInfo();
                                 workerInfo.workerID = reader.GetInt32(0); 
                                 workerInfo.name = reader.GetString(1);
                                 workerInfo.applecare = reader.GetInt32(2);
                                 workerInfo.business = reader.GetInt32(3);
                                 workerInfo.connected = reader.GetInt32(4);
-                                workerInfo.created_at = reader.GetDateTime(5).ToString(); 
+                                workerInfo.created_at = reader.GetDateTime(5).ToString();
+                                
+                                //add all workers into listworkers list 
+
                                 listWorkers.Add(workerInfo); 
                             }
                         }
