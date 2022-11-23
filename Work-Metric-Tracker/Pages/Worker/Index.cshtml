@@ -1,0 +1,43 @@
+﻿@page
+@model Work_Metric_Tracker.Pages.Worker.IndexModel
+@{
+}
+
+
+<br> 
+<h2> The Best Workers of The Day </h2> 
+<p><a class="btn btn-primary btn-group-lg href="/Worker/Create"> Add Awesome Worker </a> </p> 
+
+<br> 
+
+<table class="table"> 
+    <thead> 
+        <tr> 
+            <th> ID </th>
+            <th> Name </th>
+            <th> Apple Care </th>
+            <th> Business </th>
+            <th> Connected </th>
+            <th> Created At</th>
+            <th> Admin Controls</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        
+        @foreach(var item in Model.listWorkers) { 
+            <tr> 
+
+            <td> @item.workerID </td>
+            <td> @item.name </td>
+                <td> <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;" href=""> <p> - </p> </a>  @item.applecare  <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;"  href=""> <p> + </p> </td>
+                <td> <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;"  href=""> <p> - </p> </a>  @item.business   <a class="btn btn-primary btm-sm" style="height: 30px; width: 25px;" href=""> <p> + </p>  </a> </td>
+            <td> <a class="btn btn-primary btn-sm"> - </a> @item.connected <a class="btn btn-primary btn-sm"> + </a></td>
+            <td> @item.created_at</td>
+            <td> <a class="btn btn-primary btn-danger"> EDIT WORKER INFO </a> </td>
+
+            </tr> 
+        }
+    </tbody>
+</table>
