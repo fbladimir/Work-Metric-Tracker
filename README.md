@@ -10,6 +10,8 @@ In the admin panel, you are able to increment your data logged in each category 
 
 
 #Technologies Used: 
+
+
 ![asp net_](https://user-images.githubusercontent.com/67939160/203492956-d3acbc2b-cce5-4fe4-ab1c-b45804235f32.jpg)
 ![5968364](https://user-images.githubusercontent.com/67939160/203492966-8c6192e5-8afc-4f3c-b9a7-4d21bf0654af.png)
 ![Csharp_Logo](https://user-images.githubusercontent.com/67939160/203492972-604f5180-4741-4b33-b7c7-8f68cdd68c9c.png)
