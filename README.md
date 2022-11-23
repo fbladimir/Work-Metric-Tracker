@@ -1,3 +1,5 @@
+#Currently Under Development 
+
 # Work-Metric-Tracker![frontpage](https://user-images.githubusercontent.com/67939160/203492722-04522ad7-d120-4f25-9427-797cef0519b3.png)
 
 Track your metrics through this easy-to-use metric counter. 
@@ -5,8 +7,6 @@ Track your metrics through this easy-to-use metric counter.
 ![workerpage](https://user-images.githubusercontent.com/67939160/203492824-41604e52-358b-4b82-98ff-9ca505b84986.png)
 
 In the admin panel, you are able to increment your data logged in each category and edit a specific worker. 
-
-#Currently Under Development 
 
 
 #Technologies Used: 
