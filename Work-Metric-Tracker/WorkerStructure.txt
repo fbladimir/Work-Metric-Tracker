@@ -1,0 +1,8 @@
+﻿WORKER STRUCTURE: 
+WorkerID 
+Name of Worker 
+------
+Metrics to track: 
+Apple Care 
+Business 
+Connected 
