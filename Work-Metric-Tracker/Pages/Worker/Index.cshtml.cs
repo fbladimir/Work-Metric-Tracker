@@ -2,53 +2,60 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Work_Metric_Tracker.Pages.Worker
 {
     public class IndexModel : PageModel
     {
 
-        public List<WorkerInfo> listWorkers = new List<WorkerInfo>(); 
+        public List<WorkerInfo> workerList = new List<WorkerInfo>(); 
 
+
+        //get method - get database data using try and catch
         public void OnGet()
         {
-            try
+
+            String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=workers;Integrated Security=True"; 
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=workers;Integrated Security=True"; 
+                connection.Open();
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                String sql = "SELECT * FROM workers"; 
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
-                    connection.Open();
-                    String sql = "SELECT * FROM workers"; 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        using(SqlDataReader reader = command.ExecuteReader())
+                        while (reader.Read() )
                         {
-                            while (reader.Read())
-                            {
+                            WorkerInfo workerInfo = new WorkerInfo();
 
-                                WorkerInfo workerInfo = new WorkerInfo();
-                                workerInfo.workerID = reader.GetInt32(0); 
-                                workerInfo.name = reader.GetString(1);
-                                workerInfo.applecare = reader.GetInt32(2);
-                                workerInfo.business = reader.GetInt32(3);
-                                workerInfo.connected = reader.GetInt32(4);
-                                workerInfo.created_at = reader.GetDateTime(5).ToString();
-                                
-                                //add all workers into listworkers list 
+                            workerInfo.workerID = reader.GetInt32(0);
+                            workerInfo.name = reader.GetString(1);
+                            workerInfo.connected = reader.GetInt32(2); 
+                            //missing apple care, business 
 
-                                listWorkers.Add(workerInfo); 
-                            }
                         }
                     }
-
                 }
-            } catch ( Exception ex)
-            {
-
             }
+
         }
+
+
+        //open the connection 
+
+        //create sql string to select all from table 
+
+        //use sqlcommand with both sql saved string and sql string connection 
+
+        //use sqldatareader 
+
+        //use while loop to read information from database and add into workerInfo 
+
     }
 
     public class WorkerInfo
