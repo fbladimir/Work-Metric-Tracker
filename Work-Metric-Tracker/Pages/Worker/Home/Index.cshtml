@@ -1,0 +1,51 @@
+﻿@page
+@model Work_Metric_Tracker.Pages.Worker.Home.IndexModel
+@{
+}
+
+<br>
+
+<!-- Tittle -->
+
+<h1> Awesome Workers </h1> <br>
+
+<!-- Top Performer -->
+<img src="https://starpng.com/public/uploads/preview/no1-trophy-png-image-115770293491lf3regicw.png" style="height:30px" width:30px />
+Top Performer of the Day: 
+<hr>
+
+<!-- Worker Data Table: Categories -->
+
+<table class="table">
+    <thead>
+        <tr> 
+            <td> ID </td>
+            <td> Name </td>
+            <td> Apple Care </td>
+            <td> Business </td>
+            <td> Connected </td>
+            <td> Created At </td>
+        </tr>
+
+    </thead>
+
+    <tbody> 
+
+        <!-- Worker Data Table: Actual Data -->
+
+        @foreach(var item in Model.workerList) { 
+            <tr> 
+                <td> @item.ID </td>
+                <td> @item.name </td>
+                <td> @item.applecare </td>
+                <td> @item.business </td>
+                <td> @item.connected </td>
+                <td> @item.created_at </td>
+            </tr>
+        }
+
+    </tbody>
+
+
+</table>
+
