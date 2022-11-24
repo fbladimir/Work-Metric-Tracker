@@ -5,6 +5,7 @@
 
 
 <br> 
+    
 <h2> The Best Workers of The Day </h2> 
 <p><a class="btn btn-primary btn-group-lg href="/Worker/Create"> Add Awesome Worker </a> </p> 
 
@@ -23,21 +24,22 @@
         </tr>
     </thead>
 
-
+  
     <tbody>
         
-        @foreach(var item in Model.listWorkers) { 
+       @foreach(var item in Model.workerList) { 
             <tr> 
 
-            <td> @item.workerID </td>
-            <td> @item.name </td>
-                <td> <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;" href=""> <p> - </p> </a>  @item.applecare  <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;"  href=""> <p> + </p> </td>
-                <td> <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;"  href=""> <p> - </p> </a>  @item.business   <a class="btn btn-primary btm-sm" style="height: 30px; width: 25px;" href=""> <p> + </p>  </a> </td>
-            <td> <a class="btn btn-primary btn-sm"> - </a> @item.connected <a class="btn btn-primary btn-sm"> + </a></td>
-            <td> @item.created_at</td>
+            <td> @item </td>
+            <td> @item</td>
+                <td> <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;" href=""> <p> - </p> </a>  @item  <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;"  href=""> <p> + </p> </td>
+                <td> <a class="btn btn-primary btn-sm" style="height: 30px; width: 25px;"  href=""> <p> - </p> </a>  @item   <a class="btn btn-primary btm-sm" style="height: 30px; width: 25px;" href=""> <p> + </p>  </a> </td>
+            <td> <a class="btn btn-primary btn-sm"> - </a> @item <a class="btn btn-primary btn-sm"> + </a></td>
+            <td> @item</td>
             <td> <a class="btn btn-primary btn-danger"> EDIT WORKER INFO </a> </td>
 
             </tr> 
         }
     </tbody>
+ 
 </table>
