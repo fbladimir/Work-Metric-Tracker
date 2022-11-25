@@ -1,0 +1,48 @@
+﻿@page
+@model Work_Metric_Tracker.Pages.Worker.IndexModel
+@{
+}
+
+<!-- Worker Table Title -->
+<h1> Awesome Workers <a href="Add" class="btn btn-primary btn-success"> Add Worker </a> </h1> 
+<br> 
+<!-- Top Performer Area -->
+<img style="height: 30px; width:30px;" src="https://starpng.com/public/uploads/preview/no1-trophy-png-image-115770293491lf3regicw.png"> Top Performer of The Day:
+<br> 
+
+
+<!-- Worker Table Categories -->
+
+<table class="table"> 
+    <thead>
+        <tr> 
+            <td> ID </td>
+            <td> Name </td>
+            <td> Apple Care </td>
+            <td> Business </td>
+            <td> Connected </td>
+            <td> Created On </td>
+            <td> Actions </td>
+        </tr>
+
+    </thead> 
+
+    <tbody> 
+        <!-- Worker Table Data -->
+        @foreach (var item in Model.workers) { 
+            <tr> 
+                <td> @item.ID </td>
+                <td> @item.name </td>
+                <td> @item.applecare </td>
+                <td> @item.business </td>
+                <td> @item.connected </td> 
+                <td> @item.created_at </td>
+                <td> 
+                  <a class="btn btn-secondary btn-outline-white" href="/"> Remove </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
