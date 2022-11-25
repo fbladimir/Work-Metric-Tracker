@@ -1,10 +1,14 @@
 #Currently Under Development 
 
-# Work-Metric-Tracker![frontpage](https://user-images.githubusercontent.com/67939160/203492722-04522ad7-d120-4f25-9427-797cef0519b3.png)
+# Work-Metric-Tracker!
+![frontpage](https://user-images.githubusercontent.com/67939160/204055804-6f0c2891-7893-4509-a95d-d6dff3a989ab.png)
+
+
 
 Track your metrics through this easy-to-use metric counter. 
+![workerpage](https://user-images.githubusercontent.com/67939160/204055816-8fca962d-9efd-49ef-8133-87ddd4ef6441.png)
 
-![workerpage](https://user-images.githubusercontent.com/67939160/203492824-41604e52-358b-4b82-98ff-9ca505b84986.png)
+
 
 In the admin panel, you are able to increment your data logged in each category and edit a specific worker. 
 
