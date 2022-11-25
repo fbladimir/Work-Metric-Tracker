@@ -7,22 +7,71 @@
 <h1> New Worker </h1>
 
 <!-- Error Message -->
-
+@if (@Model.errMessage.Length > 0)
+{
+    <div class="row mb-3">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <Strong> @Model.errMessage</Strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>
+        </div>
+    </div>
+}
 
 
 <!-- Create Form -->
 
-<form method="POST"> 
+<form method ="POST"> 
 
     <div class="row mb-3"> 
         <label class="col-sm-3 col-form-label"> Name </label>
         <div class="col-sm-6"> 
-            <input type="text" class="form-control" name="name"> 
+            <input type="text" class="form-control" name="name" value="@Model.worker.name">  
         </div>
     </div>
 
-</form>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> AppleCare </label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="applecare" value="@Model.worker.applecare">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Business </label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="business" value="@Model.worker.business">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Connected </label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="connected" value="@Model.worker.connected">
+        </div>
+    </div>
+
+
 
 <!-- Success Message -->
 
-<!-- Submit Button -->
+@if (@Model.successMessage.Length > 0) { 
+    <div class="row mb-3"> 
+        <div class="alert alert-success alert-dismissible fade show" role="alert"> 
+            <Strong> @Model.successMessage</Strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>
+        </div>
+    </div>
+}
+
+    <!-- Submit Button -->
+    <div class="row mb-3"> 
+        <div class="offset-sm-3 col-sm-3 d-grid"> 
+            <button type="submit" class="btn btn-primary"> Submit </button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button"> Cancel </a>
+        </div>
+    </div>
+
+</form> 
+
