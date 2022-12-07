@@ -1,4 +1,4 @@
-#Currently Under Development 
+### Currently Under Development 
 
 # Work-Metric-Tracker!
 ![frontpage](https://user-images.githubusercontent.com/67939160/204055804-6f0c2891-7893-4509-a95d-d6dff3a989ab.png)
@@ -13,7 +13,7 @@ Track your metrics through this easy-to-use metric counter.
 In the admin panel, you are able to increment your data logged in each category and edit a specific worker. 
 
 
-#Technologies Used: 
+## Technologies Used: 
 
 
 ![asp net_](https://user-images.githubusercontent.com/67939160/203492956-d3acbc2b-cce5-4fe4-ab1c-b45804235f32.jpg)
